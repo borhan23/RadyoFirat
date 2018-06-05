@@ -1,0 +1,119 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/backwith">
+
+
+    <TextView
+        android:id="@+id/textviewControl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/sesBar"
+        android:layout_centerHorizontal="true"
+        android:text="RADYO DURUMU : HAZIR"
+        android:textStyle="italic" />
+
+
+    <com.github.clans.fab.FloatingActionMenu
+        android:id="@+id/fab_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        fab:menu_animationDelayPerItem="55"
+        fab:menu_colorNormal="#6c2019"
+        fab:menu_colorPressed="#662f2a"
+        fab:menu_colorRipple="#795552"
+        fab:menu_fab_label="Bizi Takip Edin"
+        fab:menu_fab_size="normal"
+        fab:menu_icon="@mipmap/ic_like"
+        fab:menu_labels_colorNormal="#333"
+        fab:menu_labels_colorPressed="#444"
+        fab:menu_labels_colorRipple="#444"
+        fab:menu_labels_cornerRadius="3dp"
+        fab:menu_labels_ellipsize="none"
+        fab:menu_labels_margin="0dp"
+        fab:menu_labels_maxLines="-1"
+        fab:menu_labels_padding="8dp"
+        fab:menu_labels_position="left"
+        fab:menu_labels_showShadow="true"
+        fab:menu_labels_singleLine="false"
+        fab:menu_labels_textColor="#f2f1f1"
+        fab:menu_labels_textSize="15sp"
+        fab:menu_openDirection="down">
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/floating_facebook"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/action_fb"
+            fab:fab_size="mini" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/floating_twitter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/action_tw"
+            fab:fab_size="mini" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/floating_instagram"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/action_insta"
+            fab:fab_size="mini" />
+    </com.github.clans.fab.FloatingActionMenu>
+
+    <TextView
+        android:id="@+id/main_activity_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textviewControl"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="24dp"
+        android:maxLength="40"
+        android:text="Elazığ 89.2 Radyo Fırat"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="16dp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/PlayPauseButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/radyo_firat" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/sesBar"
+        android:layout_toLeftOf="@+id/imageView3"
+        android:layout_toStartOf="@+id/imageView3"
+        android:src="@mipmap/ic_volume_up" />
+
+    <co.mbo.radyofirat.MaterialPlayPauseButton
+        android:id="@+id/PlayPauseButton"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_above="@+id/main_activity_text_view"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="21dp" />
+
+    <SeekBar
+        android:id="@+id/sesBar"
+        android:layout_width="250dp"
+        android:layout_height="35dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="90dp" />
+
+</RelativeLayout>
